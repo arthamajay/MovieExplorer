@@ -1,9 +1,12 @@
 import axios from 'axios';
+// dotenv not needed in browser
+
+// dotenv config removed
 
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
-const TMDB_API_KEY = 'b052c2cc7d6a8123f090f61d3304a806';
+const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
-export const TMDB_IMAGE_BASE    = 'https://image.tmdb.org/t/p/w500';
+export const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 export const TMDB_BACKDROP_BASE = 'https://image.tmdb.org/t/p/w1280';
 
 const tmdbClient = axios.create({
